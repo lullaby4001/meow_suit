@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>角色服裝選擇器</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-decor">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+    </div>
+    <div class="container">
+        <h2 class="section-title">個人服裝</h2>
+        <div class="currency-display">
+            <i class="fas fa-coins"></i>
+            <span id="currency-amount">1000</span>
+        </div>
+        <div class="content-wrapper">
+            <div class="preview-section">
+                
+                <div class="character-preview">
+                    <img id="character-image" src="images/character1-costume0.png" alt="角色預覽">
+                </div>
+            </div>
+            <div class="selection-section">
+                <div class="character-selection">
+                    <div class="character-grid">
+                        <div class="character-item selected" onclick="selectCharacter(1)" data-owned="true">
+                            <img src="images/character1-costume0.png" alt="狗狗">
+                            <span>狗狗</span>
+                            <div class="character-status owned">目前角色</div>
+                        </div>
+                        <div class="character-item locked" onclick="attemptSwitch(2)" data-price="500">
+                            <img src="images/character2-costume0.png" alt="狐狸">
+                            <span>狐狸</span>
+                            <div class="character-status">
+                                <i class="fas fa-coins"></i> 500
+                            </div>
+                        </div>
+                        <div class="character-item locked" onclick="attemptSwitch(3)" data-price="500">
+                            <img src="images/character3-costume0.png" alt="大熊">
+                            <span>大熊</span>
+                            <div class="character-status">
+                                <i class="fas fa-coins"></i> 500
+                            </div>
+                        </div>
+                        <div class="character-item locked" onclick="attemptSwitch(4)" data-price="500">
+                            <img src="images/character4-costume0.png" alt="貓咪">
+                            <span>貓咪</span>
+                            <div class="character-status">
+                                <i class="fas fa-coins"></i> 500
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="costume-selection">
+                    <div class="costume-grid">
+                        <div class="costume-item" onclick="selectCostume(1)">
+                            <div class="costume-image">
+                                <i class="fa-solid fa-shirt"></i>
+                            </div>
+                            <span>訓練服</span>
+                        </div>
+                        <div class="costume-item" onclick="selectCostume(2)">
+                            <div class="costume-image">
+                                <i class="fa-solid fa-vest"></i>
+                            </div>
+                            <span>職業服</span>
+                        </div>
+                        <div class="costume-item" onclick="selectCostume(3)">
+                            <div class="costume-image">
+                                <i class="fa-solid fa-vest-patches"></i>
+                            </div>
+                            <span>專家服</span>
+                        </div>
+                        <div class="costume-item" onclick="selectCostume(4)">
+                            <div class="costume-image">
+                                <i class="fa-solid fa-image"></i>
+                            </div>
+                            <span>背景</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
