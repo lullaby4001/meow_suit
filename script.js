@@ -59,6 +59,7 @@ function attemptSwitch(newCharacterId) {
 function switchCharacter(newCharacterId) {
     currentCharacter = newCharacterId;
     updateCharacterStatus();
+    selectCostume(1); // 自動切換到訓練服
     updateCharacterImage();
     updateCostumeImages();
 }
